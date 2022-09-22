@@ -6,3 +6,5 @@ This lecture used [Android Studio](https://developer.android.com/studio?gclid=EA
 1. [Make project](https://github.com/ordem-yoo/junior_2_app_development/tree/main/start)
 
 2. [Login and Sign up screen](https://github.com/ordem-yoo/junior_2_app_development/tree/main/activity_example)
+
+3. [Activity Data Delivery, App Theme, Service](https://github.com/ordem-yoo/junior-2-app-development/blob/main/activity_example/README_Activity_Data_service.md)
