@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, BackgroundService.class);
+                Intent intent = new Intent(MainActivity.this, ForegroundService.class);
                 startService(intent);
 
                 finish();
