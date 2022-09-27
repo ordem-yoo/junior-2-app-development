@@ -3,7 +3,7 @@
 <h3> Detailed description can be found in  <a href="https://ordem.notion.site/41636d9604ea40398bbbc9c7fea14836"> <img height="25" align=absmiddle src="https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white" alt="ordem-yoo" /></a>
 </h3>
 <br>
-<h3> Activity Data Delivery　　　　　　　　App Theme　　　　　　　　　　　　Foreground Service</h3>
+<h3> Activity Data Delivery　　　　　　　App Theme　　　　　　　　　　　　Foreground Service</h3>
 <div>
 <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/344888cd-114e-4b53-a277-33d388981369/ezgif-2-27605a0533.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220927%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220927T132646Z&X-Amz-Expires=86400&X-Amz-Signature=76408d20e0fa51c3cc4b07bb966013f82a92ede0ddcba502b01fd9020e0ff34c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22ezgif-2-27605a0533.gif%22&x-id=GetObject" width="33%">
 <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/595d651a-9624-4099-aa6f-b17ea669a91a/ezgif-2-00b04c39bc.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220927%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220927T132801Z&X-Amz-Expires=86400&X-Amz-Signature=cbb09991b981ea89617eace84a7171244a7238d4e2c3bb977e71ff20fbe328bd&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22ezgif-2-00b04c39bc.gif%22&x-id=GetObject" width="33%">
