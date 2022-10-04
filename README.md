@@ -12,8 +12,6 @@ This lecture used [Android Studio](https://developer.android.com/studio?gclid=EA
 
 3. [Activity Data Delivery, App Theme,](https://github.com/ordem-yoo/junior-2-app-development/blob/main/activity_example/README_Activity_Data_service.md) [Background Service]()
 
-4. [Foreground Service]() []()
+4. [Foreground Service,](https://github.com/ordem-yoo/junior-2-app-development/tree/main/service) [Broadcast](https://github.com/ordem-yoo/junior-2-app-development/tree/main/broadcast)
 
-5. [Broadcast]()
-
-6. [Recyclerview]()
+5. [Recyclerview]()
