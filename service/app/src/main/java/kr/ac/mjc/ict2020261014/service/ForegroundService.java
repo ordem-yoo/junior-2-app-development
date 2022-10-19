@@ -25,7 +25,7 @@ public class ForegroundService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         notificationManager=getSystemService(NotificationManager.class);
-        
+
         NotificationChannel channel = new NotificationChannel("Download","Download",NotificationManager.IMPORTANCE_DEFAULT);
         notificationManager.createNotificationChannel(channel);
 
