@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "289105753821",
+    "project_id": "firestore-54cc1",
+    "storage_bucket": "firestore-54cc1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289105753821:android:67b1ca53e23044e495cd34",
+        "android_client_info": {
+          "package_name": "kr.ac.mjc.firestore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289105753821-js9l2uk0aluqfq5cke1lea5j41h06am7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATOwU6HqVCfOMaQfAi_xM3U2LQI9O3ue0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289105753821-js9l2uk0aluqfq5cke1lea5j41h06am7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

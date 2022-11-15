@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/student_name_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Student Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/student_number_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Student Number"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/student_department_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Department"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/add_student_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Student" />
+</LinearLayout>
