@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "625680279185",
+    "project_id": "chatting-f1fdd",
+    "storage_bucket": "chatting-f1fdd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625680279185:android:2d403b1eb3719c15d3c130",
+        "android_client_info": {
+          "package_name": "kr.ac.mjc.chatting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625680279185-u6jb95vvo4tuk3m4f5kq8erdddvh74rd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCauet54Xg4c5zs_wkLnqjy4BYl3_ffz-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625680279185-u6jb95vvo4tuk3m4f5kq8erdddvh74rd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
