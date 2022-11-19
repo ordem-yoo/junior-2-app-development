@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/chatting/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/chatting/app/src/main/res/layout/activity_nickname.xml" value="0.33" />
+        <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/chatting/app/src/main/res/layout/item_message_me.xml" value="0.33" />
+        <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/chatting/app/src/main/res/layout/item_message_other.xml" value="0.3651041666666667" />
       </map>
     </option>
   </component>
