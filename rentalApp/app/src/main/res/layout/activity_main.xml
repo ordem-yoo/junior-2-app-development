@@ -7,11 +7,11 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/email_tv"
+        android:id="@+id/email_et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Enter your id"
+        android:hint="Enter your email"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/password_tv"
+        android:id="@+id/password_et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -27,7 +27,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/email_et" />
 
     <LinearLayout
         android:layout_width="409dp"
@@ -36,7 +36,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_tv">
+        app:layout_constraintTop_toBottomOf="@+id/password_et">
 
         <Button
             android:id="@+id/signup_btn"
@@ -61,7 +61,7 @@
         android:id="@+id/imageView2"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:layout_constraintBottom_toTopOf="@+id/email_tv"
+        app:layout_constraintBottom_toTopOf="@+id/email_et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
