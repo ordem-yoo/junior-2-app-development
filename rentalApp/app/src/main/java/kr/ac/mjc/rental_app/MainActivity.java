@@ -1,10 +1,11 @@
-package kr.ac.mjc.rentalapp;
+package kr.ac.mjc.rental_app;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-        completeLogin();
 
         EditText emailEt = findViewById(R.id.email_et);
         EditText passwordEt = findViewById(R.id.password_et);
@@ -33,25 +34,42 @@ public class MainActivity extends AppCompatActivity {
         Button signupBtn = findViewById(R.id.signup_btn);
         Button signinBtn = findViewById(R.id.signin_btn);
 
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            int location_result = checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION);
+
+            if (location_result != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{
+                        Manifest.permission.ACCESS_FINE_LOCATION
+                }, 0);
+            }
+
+        }
+
         signinBtn.setOnClickListener(new View.OnClickListener() {
+            FirebaseAuth auth = FirebaseAuth.getInstance();
+
             @Override
             public void onClick(View view) {
                 String email = emailEt.getText().toString();
                 String password = passwordEt.getText().toString();
 
-                auth.signInWithEmailAndPassword(email, password)
-                        .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                            @Override
-                            public void onSuccess(AuthResult authResult) {
-                                completeLogin();
-                            }
-                        })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                            }
-                        });
+                if (email != null && password != null) {
+                    auth.signInWithEmailAndPassword(email, password)
+                            .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                                @Override
+                                public void onSuccess(AuthResult authResult) {
+                                    completeLogin();
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                } else{
+                    Toast.makeText(MainActivity.this, "Enter your email or password", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         signupBtn.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
                 startActivity(intent);
-
             }
         });
     }

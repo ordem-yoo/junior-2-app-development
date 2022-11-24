@@ -1,4 +1,4 @@
-package kr.ac.mjc.rentalapp;
+package kr.ac.mjc.rental_app;
 
 import org.junit.Test;
 
