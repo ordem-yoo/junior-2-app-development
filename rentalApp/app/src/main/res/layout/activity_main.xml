@@ -7,7 +7,7 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/email_et"
+        android:id="@+id/email_Et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/password_et"
+        android:id="@+id/password_Et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -27,7 +27,7 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_et" />
+        app:layout_constraintTop_toBottomOf="@+id/email_Et" />
 
     <LinearLayout
         android:layout_width="409dp"
@@ -36,10 +36,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_et">
+        app:layout_constraintTop_toBottomOf="@+id/password_Et">
 
         <Button
-            android:id="@+id/signup_btn"
+            android:id="@+id/signup_Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -48,7 +48,7 @@
             android:text="Sign Up" />
 
         <Button
-            android:id="@+id/signin_btn"
+            android:id="@+id/signin_Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -61,7 +61,7 @@
         android:id="@+id/imageView2"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:layout_constraintBottom_toTopOf="@+id/email_et"
+        app:layout_constraintBottom_toTopOf="@+id/email_Et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

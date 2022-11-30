@@ -28,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        EditText emailEt = findViewById(R.id.email_et);
-        EditText passwordEt = findViewById(R.id.password_et);
+        EditText emailEt = findViewById(R.id.email_Et);
+        EditText passwordEt = findViewById(R.id.password_Et);
 
-        Button signupBtn = findViewById(R.id.signup_btn);
-        Button signinBtn = findViewById(R.id.signin_btn);
+        Button signupBtn = findViewById(R.id.signup_Btn);
+        Button signinBtn = findViewById(R.id.signin_Btn);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
             int location_result = checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION);
