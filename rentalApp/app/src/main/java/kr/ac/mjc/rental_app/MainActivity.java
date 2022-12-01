@@ -36,11 +36,17 @@ public class MainActivity extends AppCompatActivity {
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
             int location_result = checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION);
+            int camera_permission = checkSelfPermission(Manifest.permission.CAMERA);
 
             if (location_result != PackageManager.PERMISSION_GRANTED) {
                 requestPermissions(new String[]{
                         Manifest.permission.ACCESS_FINE_LOCATION
                 }, 0);
+            }
+            if(camera_permission != PackageManager.PERMISSION_GRANTED){
+                requestPermissions(new String[]{
+                        Manifest.permission.CAMERA
+                },0);
             }
 
         }
