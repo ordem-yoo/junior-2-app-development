@@ -20,6 +20,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.UploadTask;
@@ -69,13 +70,13 @@ public class AddFragment extends Fragment {
         uploadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(selectedImage == null){// 사용자가 이미지를 선택안했을때
-                    Toast.makeText(getContext(),"Please Select Image",Toast.LENGTH_SHORT).show();
+                if (selectedImage == null) {// 사용자가 이미지를 선택안했을때
+                    Toast.makeText(getContext(), "Please Select Image", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 String text = textEt.getText().toString();
-                if(text.equals("")){
-                    Toast.makeText(getContext(),"Please fill out application",Toast.LENGTH_SHORT).show();
+                if (text.equals("")) {
+                    Toast.makeText(getContext(), "Please fill out application", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 String fileName = UUID.randomUUID().toString();
@@ -86,15 +87,35 @@ public class AddFragment extends Fragment {
                             @Override
                             public void onSuccess(Uri uri) {
                                 String imageUrl = uri.toString();
-                                Log.d("mjc",imageUrl);
+                                Log.d("mjc", imageUrl);
+                                Post post = new Post();
+                                String email = auth.getCurrentUser().getEmail();
+                                String text = textEt.getText().toString();
+
+                                post.setUserId(email);
+                                post.setText(text);
+                                post.setImageUrl(imageUrl);
+
+                                uploadPost(post);
                             }
                         });
 
                     }
                 });
-                Toast.makeText(getContext(),"Upload complete",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Upload complete", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    public void uploadPost(Post post){
+        firestore.collection("posts").add(post)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        imageIv.setImageDrawable(getResources().getDrawable(R.drawable.add_box));
+                        textEt.setText("");
+                    }
+                });
     }
 
     @Override
