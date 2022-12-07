@@ -73,7 +73,9 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             });
-                } else{
+                } else if (email == null && password == null) {
+                    Toast.makeText(MainActivity.this, "your email or password is incorrect", Toast.LENGTH_SHORT).show();
+                } else {
                     Toast.makeText(MainActivity.this, "Enter your email or password", Toast.LENGTH_SHORT).show();
                 }
             }

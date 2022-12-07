@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "116140099032",
+    "project_id": "rentalapp-19aed",
+    "storage_bucket": "rentalapp-19aed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116140099032:android:a87da4c245532eff099ead",
+        "android_client_info": {
+          "package_name": "kr.ac.mjc.rentalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116140099032-9i3cc9030seofn57a0qaqdjaqcpfs1jl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIH_7qi9dszK3ZdEuj4rLRWYcDQV1QAtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116140099032-9i3cc9030seofn57a0qaqdjaqcpfs1jl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
