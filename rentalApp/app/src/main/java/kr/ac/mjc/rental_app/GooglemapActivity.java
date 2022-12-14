@@ -1,15 +1,11 @@
 package kr.ac.mjc.rental_app;
 
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,13 +16,13 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.journeyapps.barcodescanner.ScanContract;
-import com.journeyapps.barcodescanner.ScanOptions;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 public class GooglemapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    final static int TAKE_PICTURE = 1;
+    private IntentIntegrator qrCode;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,17 +36,17 @@ public class GooglemapActivity extends AppCompatActivity implements OnMapReadyCa
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        qrCode = new IntentIntegrator(this);
+        qrCode.setOrientationLocked(false);
+        qrCode.setPrompt("Please take a picture of the QR code to fit the square");
+        qrCode.setBeepEnabled(false);
+
         rentalBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                barcodeLauncher.launch(new ScanOptions()
-                        .setPrompt("Please take a picture of the QR code to fit the square")
-                        
-                        );
-
+                qrCode.initiateScan();
             }
         });
-
 
         recordBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,19 +73,19 @@ public class GooglemapActivity extends AppCompatActivity implements OnMapReadyCa
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent intent)
-    {
-        super.onActivityResult(requestCode, resultCode, intent);
-
-
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+        if (result != null) {
+            if (result.getContents() == null) {
+                Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
+                Intent contentIntent = new Intent(GooglemapActivity.this, CheckTimeActivity.class);
+                contentIntent.putExtra("Device Number", result.getContents());
+                startActivity(contentIntent);
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, intent);
+        }
     }
-
-    private final ActivityResultLauncher<ScanOptions> barcodeLauncher = registerForActivityResult(new ScanContract(),
-            result -> {
-                if(result.getContents() == null) {
-                    Toast.makeText(GooglemapActivity.this, "Cancelled", Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(GooglemapActivity.this, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
-                }
-            });
 }

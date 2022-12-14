@@ -7,11 +7,14 @@
         <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/rentalApp/app/src/main/res/drawable/radius_button.xml" value="0.349" />
         <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/rentalApp/app/src/main/res/layout/activity_main.xml" value="0.3651041666666667" />
         <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/rentalApp/app/src/main/res/layout/activity_mains.xml" value="0.3651041666666667" />
+        <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/rentalApp/app/src/main/res/layout/check_time.xml" value="0.33" />
         <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/rentalApp/app/src/main/res/layout/googlemap_screen.xml" value="0.1875" />
         <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/rentalApp/app/src/main/res/layout/map_screen.xml" value="0.3651041666666667" />
         <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/rentalApp/app/src/main/res/layout/record_item.xml" value="0.3651041666666667" />
         <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/rentalApp/app/src/main/res/layout/record_screen.xml" value="0.33" />
-        <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/rentalApp/app/src/main/res/layout/rental_screen.xml" value="0.1" />
+        <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/rentalApp/app/src/main/res/layout/rental_finish_screen.xml" value="0.25" />
+        <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/rentalApp/app/src/main/res/layout/rental_screen.xml" value="0.25" />
+        <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/rentalApp/app/src/main/res/layout/return_screen.xml" value="0.22" />
         <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/rentalApp/app/src/main/res/layout/signup_screen.xml" value="0.3651041666666667" />
         <entry key="..\:/study/univ/3_junior/semester_2/junior_2_app_development/rentalApp/app/src/main/res/layout/splash_screen.xml" value="0.3651041666666667" />
       </map>
