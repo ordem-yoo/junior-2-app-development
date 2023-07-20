@@ -1,6 +1,6 @@
 # junior_2_app_development
 
-<img src="https://codexmatrix.com/wp-content/uploads/2022/06/Mobio-Android-Banner.png" width ="100%"/>
+<img src="https://i.ibb.co/BNBsJjC/android-removebg.png" width ="20%"/>
 
 This repository contains the contents of the Android app development that I learned. <br>
 This lecture used [Android Studio](https://developer.android.com/studio?gclid=EAIaIQobChMI_qWrta2F-gIVF66WCh0XiQBYEAAYASAAEgJHV_D_BwE&gclsrc=aw.ds).
